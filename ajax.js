@@ -6,6 +6,7 @@ request.open("GET", `https://restcountries.com/v3.1/name/Bhārat`);
 request.send();
 
 request.addEventListener("load", function () {
+  console.log("First Request");
   const [data] = JSON.parse(this.responseText);
   const resultText = data.altSpellings.join("  <<<=>>>  ");
   ajaxText.textContent = resultText;

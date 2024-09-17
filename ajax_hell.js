@@ -7,6 +7,8 @@ request_1.open("GET", `https://restcountries.com/v3.1/name/Bhārat`);
 request_1.send();
 
 request_1.addEventListener("load", function () {
+  console.log("Second Request");
+
   const [data_1] = JSON.parse(this.responseText);
   const resultText = data_1.altSpellings.join("(._.)");
   ajaxHellText.textContent = resultText;
